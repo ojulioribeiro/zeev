@@ -258,7 +258,7 @@ function diffDayDates(inicioID, finalID){
 }
 
 //**Compara data inserida com proxima data disponivel no financeiro */
-function dataDisponivel(fieldID){
+function dateDisp(fieldID){
     var field = $(fieldID);
     var date = field.val();
 
