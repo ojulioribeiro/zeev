@@ -293,4 +293,11 @@ function dateDisp(fieldID){
     }
 }
 
-Teste de Atualizacao
+//* Gera Textos Aleatórios em linhas de tabela*/
+function randomColumn(fieldID, size){
+    var field = $(fieldID);
+
+    field.each(function(i){
+        $(this).val(randomText(size));
+    });
+}
