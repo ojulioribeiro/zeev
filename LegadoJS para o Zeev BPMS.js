@@ -117,7 +117,7 @@ function filterRows(fieldID, nColumn, filtro, tipofiltro){
     //Define tabela a partir do campo ancorador
     var tab = $(fieldID).closest('table');
 
-    if(tipofiltro = 'C'){
+    if(tipofiltro === 'C'){
         tab.find('tr').next('tr').each(function(){
         	if($(this).find('td').eq(nColumn).text().indexOf(filtro) == -1){
             		$(this).hide();
