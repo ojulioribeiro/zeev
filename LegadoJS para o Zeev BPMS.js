@@ -113,29 +113,30 @@ function clearTable(fieldID){
 }
 
 //***Filtra Linhas de tabela multivalorada conforme condições */
-function filterRows(fieldID, nColumn, filtro, tipofiltro){
-    
-    //Se tipofiltro = 0 Contém, se tipofiltro = 1 Não Contém
-    
+function filterRows(fieldID, nColumn, filtro, tipofiltro){  
     //Define tabela a partir do campo ancorador
     var tab = $(fieldID).closest('table');
 
-    if(tipofiltro = 0){
-        //Verifica todas as linhas da tabela, ocultando as que não atendem a condição
+    if(tipofiltro = 'C'){
         tab.find('tr').next('tr').each(function(){
-            if($(this).find('td').eq(nColumn).text().indexOf(filtro) == -1){
-                $(this).hide();
-            }
+        	if($(this).find('td').eq(nColumn).text().indexOf(filtro) == -1){
+            		$(this).hide();
+        	}
         });
-    }
-    if(tipofiltro = 1){
-        //Verifica todas as linhas da tabela, ocultando as que atendem a condição
+    } else{
         tab.find('tr').next('tr').each(function(){
             if($(this).find('td').eq(nColumn).text().indexOf(filtro) != -1){
                 $(this).hide();
             }
-        });
+            });
     }
+
+    //Verifica todas as linhas da tabela, ocultando as que não atendem a condição
+    //tab.find('tr').next('tr').each(function(){
+    //    if($(this).find('td').eq(nColumn).text().indexOf(filtro) == -1){
+    //       $(this).hide();
+    //    }
+    //});
 }
 
 //***Oculta bloco de anexos */
