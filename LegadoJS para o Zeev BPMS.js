@@ -130,13 +130,6 @@ function filterRows(fieldID, nColumn, filtro, tipofiltro){
             }
             });
     }
-
-    //Verifica todas as linhas da tabela, ocultando as que não atendem a condição
-    //tab.find('tr').next('tr').each(function(){
-    //    if($(this).find('td').eq(nColumn).text().indexOf(filtro) == -1){
-    //       $(this).hide();
-    //    }
-    //});
 }
 
 //***Oculta bloco de anexos */
