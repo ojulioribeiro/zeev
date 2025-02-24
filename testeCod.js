@@ -12,19 +12,3 @@ function hide(fieldID) {
             field[0].setAttribute('xrequired', 'S');
         }
     }
-
-    // Marcar o campo como nao obrigatório
-    field[0].setAttribute('required', 'N');
-
-    // Limpar o campo
-    if (field.is('input')) {
-        if (field.attr('type') == 'text') {
-            field.val('');
-        } else if (field.attr('type') == 'radio') {
-            field.prop('checked', false);
-        }
-    } else if (field.is('select') || field.is('textarea')) {
-        field.val('');
-    }
-    return field;
-}
